@@ -1,0 +1,335 @@
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+
+local Window = Fluent:CreateWindow({
+    Title = "SharkBite2 " .. Fluent.Version,
+    SubTitle = "by MouriTi",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = true,
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.LeftControl
+})
+
+local Tabs = {
+    Main = Window:AddTab({ Title = "Thuyền", Icon = "" }),
+}
+
+local Options = Fluent.Options
+
+do
+    Fluent:Notify({
+        Title = "Notification",
+        Content = "This is a notification",
+        SubContent = "SubContent",
+        Duration = 5
+    })
+
+
+
+    Tabs.Main:AddParagraph({
+        Title = "Tự Động Cập Nhật",
+        Content = "Miễn Phí Tất Cả Thuyền!"
+    })
+
+    local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
+        Title = "Lựa chọn",
+        Values = {"DuckyBoat","BlueCanopyMotorboat","BlueWoodenMotorboat","UnicornBoat"," Jetski","RedMarlin","Sloop","LightBike","SmallDinghyMotorboat","JetskiDonut","Marlin","DuckyBoatBeta","TubeBoat","FishingBoat","VikingShip","SmallWoodenSailboat","RedCanopyMotorboat","Catamaran","CombatBoat","TourBoat","ModernOilRig","Duckmarine","MilitarySubmarine","GingerbreadSteamBoat","FestiveGalleon","Snowmobile","PartyBoat","TugBoat","CruiseShip","Wildfire","SharkCageBoat","ViperSpeedBoat","HydroTank","PyroTank","PyroTank","MagicWandBoat","SnowmobileLime","Sleigh2022","RGBTurretSleigh","BlueSnowmobile","Sleigh2023","GingerBoatMan","Titanic","Britannic","UFO","HoverHeart","CoffinBoat"},
+        Multi = false,
+        Default = 1,
+    })
+
+    Dropdown:SetValue("DuckyBoat")
+
+    Dropdown:OnChanged(function(Value)
+        if Value == "DuckyBoat" then
+		local args = {
+    [1] = "DuckyBoat"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "BlueCanopyMotorboat" then
+      local args = {
+    [1] = "BlueCanopyMotorboat"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "BlueWoodenMotorboat" then
+local args = {
+    [1] = "BlueWoodenMotorboat"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "UnicornBoat" then
+local args = {
+    [1] = "UnicornBoat"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "Jetski" then
+local args = {
+    [1] = "Jetski"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "RedMarlin" then
+local args = {
+    [1] = "RedMarlin"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "Sloop" then
+local args = {
+    [1] = "Sloop"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "LightBike" then
+local args = {
+    [1] = "LightBike"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "SmallDinghyMotorboat" then
+local args = {
+    [1] = "SmallDinghyMotorboat"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "JetskiDonut" then
+   local args = {
+    [1] = "JetskiDonut"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "Marlin" then
+   local args = {
+    [1] = "Marlin"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "DuckyBoatBeta" then
+   local args = {
+    [1] = "DuckyBoatBeta"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "TubeBoat" then
+   local args = {
+    [1] = "TubeBoat"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "FishingBoat" then
+   local args = {
+    [1] = "FishingBoat"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "VikingShip" then
+   local args = {
+    [1] = "VikingShip"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "SmallWoodenSailboat" then
+   local args = {
+    [1] = "SmallWoodenSailboat"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "RedCanopyMotorboat" then
+   local args = {
+    [1] = "RedCanopyMotorboat"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "Catamaran" then
+   local args = {
+    [1] = "Catamaran"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "CombatBoat" then
+   local args = {
+    [1] = "CombatBoat"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "TourBoat" then
+   local args = {
+    [1] = "TourBoat"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "ModernOilRig" then
+   local args = {
+    [1] = "ModernOilRig"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "Duckmarine" then
+   local args = {
+    [1] = "Duckmarine"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "MilitarySubmarine" then
+   local args = {
+    [1] = "MilitarySubmarine"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "GingerbreadSteamBoat" then
+   local args = {
+    [1] = "GingerbreadSteamBoat"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "FestiveGalleon" then
+   local args = {
+    [1] = "FestiveGalleon"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "Snowmobile" then
+   local args = {
+    [1] = "Snowmobile"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "JetskiDonut" then
+   local args = {
+    [1] = "JetskiDonut"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "PartyBoat" then
+   local args = {
+    [1] = "PartyBoat"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "TugBoat" then
+   local args = {
+    [1] = "TugBoat"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "CruiseShip" then
+   local args = {
+    [1] = "CruiseShip"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "Wildfire" then
+   local args = {
+    [1] = "Wildfire"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "SharkCageBoat" then
+   local args = {
+    [1] = "SharkCageBoat"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "ViperSpeedBoat" then
+   local args = {
+    [1] = "ViperSpeedBoat"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "HydroTank" then
+   local args = {
+    [1] = "HydroTank"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "PyroTank" then
+   local args = {
+    [1] = "PyroTank"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "MagicWandBoat" then
+   local args = {
+    [1] = "MagicWandBoat"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "SnowmobileLime" then
+   local args = {
+    [1] = "SnowmobileLime"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "Sleigh2022" then
+   local args = {
+    [1] = "Sleigh2022"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "RGBTurretSleigh" then
+   local args = {
+    [1] = "RGBTurretSleigh"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "BlueSnowmobile" then
+   local args = {
+    [1] = "BlueSnowmobile"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "Sleigh2023" then
+   local args = {
+    [1] = "Sleigh2023"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "GingerBoatMan" then
+   local args = {
+    [1] = "GingerBoatMan"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "Titanic" then
+   local args = {
+    [1] = "Titanic"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "Britannic" then
+   local args = {
+    [1] = "Britannic"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "UFO" then
+   local args = {
+    [1] = "UFO"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "HoverHeart" then
+   local args = {
+    [1] = "HoverHeart"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+elseif Value == "CoffinBoat" then
+   local args = {
+    [1] = "CoffinBoat"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("EventsFolder"):WaitForChild("BoatSelection"):WaitForChild("UpdateHostBoat"):FireServer(unpack(args))
+end
+    end)
+
+
+    Input:OnChanged(function()
+        print("Input updated:", Input.Value)
+    end)
+end
